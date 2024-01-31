@@ -7,7 +7,7 @@ jobs:
     runs-on: self-hosted
     container:
       image: jrecord/nettools
-    timeout-minutes: 10
+    timeout-minutes: 5
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
