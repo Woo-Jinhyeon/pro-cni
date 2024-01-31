@@ -9,16 +9,16 @@ jobs:
       image: jrecord/nettools
     timeout-minutes: 5
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v3
+      #- name: Check out repository code
+      #  uses: actions/checkout@v3
       - name: tmc-setup
         run: |
           #./tmc_setup.sh
           curl -vk https://172.16.13.15:6443
-        env:
-          ca_crt: ${{ secrets.ca_crt }}
-          kubeconfig_cni_ps_dev: ${{ secrets.kubeconfig_cni_ps_dev }}
-          kubeconfig_cni_ps_dev_skip_tls: ${{ secrets.kubeconfig_cni_ps_dev_skip_tls }}
-          kubeconfig_cni2_dev: ${{ secrets.kubeconfig_cni2_dev }}
-          TMC_SELF_MANAGED_USERNAME: ${{ secrets.TMC_SELF_MANAGED_USERNAME }}
-          TMC_SELF_MANAGED_PASSWORD: ${{ secrets.TMC_SELF_MANAGED_PASSWORD }}
+      #  env:
+      #    ca_crt: ${{ secrets.ca_crt }}
+      #    kubeconfig_cni_ps_dev: ${{ secrets.kubeconfig_cni_ps_dev }}
+      #    kubeconfig_cni_ps_dev_skip_tls: ${{ secrets.kubeconfig_cni_ps_dev_skip_tls }}
+      #    kubeconfig_cni2_dev: ${{ secrets.kubeconfig_cni2_dev }}
+      #    TMC_SELF_MANAGED_USERNAME: ${{ secrets.TMC_SELF_MANAGED_USERNAME }}
+      #    TMC_SELF_MANAGED_PASSWORD: ${{ secrets.TMC_SELF_MANAGED_PASSWORD }}
